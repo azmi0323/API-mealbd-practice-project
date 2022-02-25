@@ -15,13 +15,13 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body class="bg-secondary">
+<body class="bg-secondary container">
 
     <header>
         <h1 class="text-center text-info p-3 m-3">Search Your Food</h1>
     </header>
     <section class="d-flex justify-content-center">
-        <div class="input-group  w-50 mb-3">
+        <div class="input-group w-lg-50 mb-3">
             <input id="food-feild" type="text" class=" form-control" placeholder="Search your food here"
                 aria-label="Search your food here" aria-describedby="button-addon2">
             <button onclick="searchFood()" class="btn btn-info" type="button" id="button-addon2">Search</button>
@@ -38,6 +38,16 @@
         <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
         </div>
     </section>
+    <section id="alart-box" class="d-none">
+        <div class="card mb-3 mx-auto w-50">
+            <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${meal.strMeal}</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -47,3 +57,4 @@
 </body>
 
 </html>
+
