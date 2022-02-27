@@ -1,5 +1,7 @@
 const searchFood = () => {
+    
     const foodFeild = document.getElementById('food-feild');
+    
     const foodFeildText = foodFeild.value;
     // console.log(foodFeildText)
    if(foodFeild.value !=''){
@@ -16,10 +18,13 @@ const searchFood = () => {
 }
 
 const getValue = meals => {
-    meals.forEach(meal => {
+    const searchResult = document.getElementById('search-result');
+    searchResult.textContent=''
+
+    
+    meals?.forEach(meal => {
         // console.log(meal)
-        const searchResult = document.getElementById('search-result');
-        
+       
         const div = document.createElement('div')
         div.classList.add('col');
         div.innerHTML = `
@@ -47,7 +52,7 @@ const mealDetails = mealId => {
 }
 
 const mealDocument = meal => {
-    console.log(meal)
+    // console.log(meal)
     const mealDiscription = document.getElementById('alart-box');
     mealDiscription.classList.remove('d-none');
     document.body.style.overflowY='hidden'
